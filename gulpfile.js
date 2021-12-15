@@ -45,7 +45,7 @@ exports.watcher = watcher;
 const html = () => {
   return gulp.src("src/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("docs"));
 }
 
 exports.html = html;
@@ -55,7 +55,7 @@ exports.html = html;
 const css = (done) => {
   gulp.src('src/**/*.css')
       .pipe(cssmin())
-      .pipe(gulp.dest('build'));
+      .pipe(gulp.dest('docs'));
       done();
 };
 
@@ -66,7 +66,7 @@ exports.css = css;
 const images = () => {
   return gulp.src("src/img/**/*.{jpg,jpeg,png}")
     .pipe(imagemin())
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.images = images;
@@ -79,7 +79,7 @@ const copy = (done) => {
   ], {
     base: "src"
   })
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("docs"))
   done();
 }
 
@@ -90,7 +90,7 @@ exports.copy = copy;
 const js = (done) => {
   gulp.src("src/**/*.js")
       .pipe(jsmin())
-      .pipe(gulp.dest("build"));
+      .pipe(gulp.dest("docs"));
   done();
 };
 
@@ -101,7 +101,7 @@ exports.js = js;
 const createWebp = () => {
   return gulp.src("src/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.createWebp = createWebp;
