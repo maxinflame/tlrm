@@ -1,0 +1,32 @@
+.search {
+  position: relative;
+}
+
+.search__icon {
+  position: absolute;
+  @include center-y;
+  left: 20px;
+}
+
+.search__input {
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid $input-border-color;
+  border-radius: 4px;
+  padding-left: 49px;
+  padding-right: 0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+
+  &::placeholder {
+    color: $placeholder-color;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $tablet-l-width) {
+    width: 100%;
+  }
+}

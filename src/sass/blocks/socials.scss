@@ -1,0 +1,31 @@
+.socials {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: $basic-white;
+  border-radius: 50%;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

@@ -1,0 +1,45 @@
+.user-nav {
+  display: flex;
+  align-items: baseline;
+  padding-right: 10px;
+  justify-content: flex-end;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.user-nav__link {
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  &--search {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.user-nav__text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-left: 8px;
+  }
+}
+
+.user-nav__link--cart .user-nav__text {
+  position: relative;
+  top: 2px;
+}

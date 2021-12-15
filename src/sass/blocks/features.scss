@@ -1,0 +1,241 @@
+.features {
+  margin-top: -39px;
+  margin-bottom: 20px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -218px;
+  }
+
+  @media (min-width: $tablet-l-width) {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -256px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    max-width: 1440px;
+  }
+}
+
+.features__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-l-width) {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $laptop-l-width) {
+    counter-reset: features-counter;
+  }
+}
+
+.features__item {
+  background-color: $basic-white;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $tablet-l-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    &:not(.features__item--whatsapp) {
+      min-height: 152px;
+    }
+  }
+
+  @media (min-width: $tablet-l-width) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $laptop-l-width) {
+    padding-left: 80px;
+    position: relative;
+
+    &::before {
+      counter-increment: features-counter;
+      content: "0" counter(features-counter);
+      position: absolute;
+      left: 16px;
+      top: 32px;
+      font-family: Gotham Pro;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 36px;
+      color: rgba(34, 34, 34, 0.2);
+    }
+  }
+}
+
+.features__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-l-width) {
+    margin-bottom: 8px;
+  }
+}
+
+.features__phone {
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.features__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 700;
+  color: $button-color;
+  border-radius: 4px;
+  border: 2px solid $button-color;
+  height: 52px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 50%;
+    flex-grow: 0;
+    margin-top: 30px;
+  }
+
+  @media (min-width: $tablet-l-width) {
+    flex-basis: 52px;
+    margin-top: 0;
+  }
+
+  &:hover {
+    background-color: $button-color;
+    color: $basic-white;
+  }
+}
+
+.features__whatsapp-icon {
+  margin-right: 7px;
+}
+
+.features__text-wrapper {
+  @media (min-width: $tablet-width) {
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+}
+
+.features__text {
+  margin: 0;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-l-width) {
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 4;
+  }
+}
+
+.features__item--whatsapp {
+  .features__title {
+    @media (min-width: $tablet-l-width) {
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: $tablet-l-width) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .features__text {
+    margin-bottom: 0;
+
+    @media (min-width: $tablet-l-width) {
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: $laptop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  .features__button {
+    color: $whatsapp-color;
+    border-color: $whatsapp-color;
+
+    &:hover {
+      background-color: $whatsapp-color;
+      color: $basic-white;
+
+      & svg {
+        color: $basic-white;
+      }
+    }
+  }
+}
+
+.features__whatsapp-button-text {
+  @media (min-width: $laptop-width) {
+    display: none;
+  }
+}
+
+.features__whatsapp-button-number {
+  display: none;
+
+  @media (min-width: $laptop-width) {
+    display: inline;
+  }
+}

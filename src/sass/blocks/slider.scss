@@ -1,0 +1,64 @@
+.slider {
+  position: relative;
+  left: -10px;
+  width: calc(100% + 20px);
+
+  @media (min-width: $tablet-width) {
+    left: -20px;
+    width: calc(100% + 40px);
+  }
+
+  @media (min-width: $tablet-l-width) {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.slider__button-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    right: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    right: 30px;
+  }
+
+  @media (min-width: 1660px) {
+    right: calc((100% - 1500px)/2);
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    right: calc((100% - 1440px)/2);
+  }
+}
+
+.slider__button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 26px;
+    height: 18px;
+    position: absolute;
+    @include center;
+    background-image: url("../img/slider-arrow.svg");
+  }
+
+  &--back {
+    transform: rotate(180deg);
+    margin-right: 1px;
+  }
+}

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jquery-nice-select-1.1.0/css/nice-select.css">
+    <link rel="stylesheet" href="tiny-slider/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body class="page-body">
+  <header class="page-header">
+      <div class="container">
+        <div class="page-header__wrapper">
+          <div class="page-header__logo-wrapper">
+            <a class="menu-button" href="#"></a>
+            <a class="logo" href="#">
+              <picture>
+                <source srcset="img/logo.webp" type="image/webp">
+                <img class="logo__img" src="img/logo.png" alt="Логотип trlm.ru" width="80" height="88">
+              </picture>
+              <span class="logo__text">trlm.ru</span>
+            </a>
+          </div>
+          <div class="page-header__select">
+            <span class="page-header__select-text">Офис на </span>
+            <select id="select" class="select">
+              <option>Малиновского</option>
+              <option>Черниковского</option>
+              <option>Ежевиковского</option>
+            </select>
+          </div>
+          <nav class="page-header__user-nav user-nav">
+            <a class="user-nav__link user-nav__link--search" href="#">
+              <svg height="24" width="24">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+              <span class="user-nav__text">Поиск</span>
+            </a>
+            <a class="user-nav__link" href="#">
+              <svg height="24" width="24">
+                <use xlink:href="img/sprite.svg#user"></use>
+              </svg>
+              <span class="user-nav__text">Войти</span>
+            </a>
+            <a class="user-nav__link user-nav__link--cart" href="#">
+              <svg height="29" width="24">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+              <span class="user-nav__text">Корзина</span>
+            </a>
+          </nav>
+          <div class="page-header__break"></div>
+          <div class="page-header__search search">
+            <svg class="search__icon" height="18" width="18">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+            <input class="search__input" type="text" placeholder="Что ищите?">
+          </div>
+          <a class="page-header__phone" href="tel:88005501980">8-800-550-19-80</a>
+          <div class="page-header__catalog-button catalog">
+            <a class="button catalog__button">
+              <span class="catalog__button-text">Каталог</span>
+            </a>
+            <div class="catalog__wrapper">
+              <ul class="catalog__category-list">
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">РАСХОДНЫЕ ЖИДКОСТИ</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Тормозные жидкости</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Охлаждающие жидкости</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Стеклоомывающие жидкости</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Мочевина</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">РАСХОДНЫЕ МАТЕРИАЛЫ</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Лампы</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Свечи</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Тормозные колодки</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Предохранители</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">АКСЕССУАРЫ</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Ароматизаторы</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Салфетки</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Герметики, герметик-прокладки</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Ткани и губки</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">МАСЛА</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Моторные</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Трансмиcсионные</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Промывочные</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Мотомасла и спец. продукты</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__category catalog__category--extra catalog__category--parts">
+                  <a class="catalog__extra-link" href="#">
+                    <span class="catalog__category-title catalog__category-title">Подбор запчастей</span>
+                  </a>
+                </li>
+                <li class="catalog__break"></li>
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">ЩЕТКИ СТЕКЛООЧИСТИТЕЛЯ</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Каркасные</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Гибридные</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Бескаркасные</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">СМАЗКИ</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Двухкомпонентные</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">ГОСТовские (литол, солидол и пр.)</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Высокотемпературные</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Специальные</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">АККУМУЛЯТОРЫ</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Для легковых автомобилей</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Для грузовых автомобилей</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Аккумуляторы AGM</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">ФИЛЬТРЫ</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Масляные</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Воздушные</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Топливные</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Салонные</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__category catalog__category--extra catalog__category--wheels">
+                  <a class="catalog__extra-link" href="#">
+                    <span class="catalog__category-title">Подбор шин и дисков</span>
+                  </a>
+                </li>
+                <li class="catalog__break"></li>
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">МОЙКА АВТО И КЛИНИНГ</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Ткани для протирки</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Аппараты высокого давления</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Пылесосы</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Химия для мойки автомобиля</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">ОБЩЕХОЗЯЙСТВЕННЫЕ ТОВАРЫ</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Батарейки</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Дистиллированная вода</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Клеи и фиксаторы</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Лаки и краски</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__category">
+                  <h2 class="catalog__category-title">АВТОКОСМЕТИКА</h2>
+                  <a class="catalog__all-link" href="#">все</a>
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="#">Очистители кузова</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Полироли кузова</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Очистители стекол</a>
+                    </li>
+                    <li class="catalog__item">
+                      <a href="#">Предохранители</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog__laptop-break"></li>
+                <li class="catalog__category catalog__category--extra catalog__category--battery">
+                  <a class="catalog__extra-link" href="#">
+                    <span class="catalog__category-title">Подбор АКБ</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav class="page-header__main-nav main-nav">
+            <a class="main-nav__link" href="#">Подбор запчастей</a>
+            <a class="main-nav__link" href="#">Доставка</a>
+            <a class="main-nav__link main-nav__link--hiding" href="#">Как купить</a>
+            <a class="main-nav__link" href="#">Оплата</a>
+            <a class="main-nav__link main-nav__link--contacts" href="#">Контакты</a>
+            <a class="main-nav__link main-nav__link--hiding" href="#">Акции</a>
+            <a class="main-nav__link main-nav__link--phone" href="tel:88005501980">8-800-550-19-80</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="visually-hidden">trlm.ru</h1>
+      <div class="slider">
+        <div class="slider__button-wrapper">
+          <button class="slider__button slider__button--back"></button>
+          <button class="slider__button slider__button--next"></button>
+        </div>
+        <div class="slider__container">
+          <div class="slide slide--champion">
+            <div class="slide__wrapper">
+              <picture>
+                <source srcset="img/slide-1-logo.webp" type="image/webp">
+                <img class="slide__logo" src="img/slide-1-logo.png" alt="Масло Champion">
+              </picture>
+              <p class="slide__text">Фильтр масла <br class="slide__break">в подарок</p>
+              <picture>
+                <source srcset="img/slide-1-img-tablet.webp" type="image/webp" media="(min-width: 640px)">
+                <source srcset="img/slide-1-img-mobile.webp" type="image/webp">
+                <source srcset="img/slide-1-img-tablet.png" media="(min-width: 640px)">
+                <img class="slide__image" src="img/slide-1-img-mobile.png" alt="Упаковка масла Champion">
+              </picture>
+              <a href="#" class="slide__link">Подробнее</a>
+              <p class="slide__title">New Energy</p>
+            </div>
+          </div>
+          <div class="slide slide--felix">
+            <div class="slide__wrapper">
+              <picture>
+                <source srcset="img/slide-2-logo.webp" type="image/webp">
+                <img class="slide__logo" src="img/slide-2-logo.png" alt="Масло Champion">
+              </picture>
+              <p class="slide__text">Комплект<br>бесконтактной<br>мойки<br class="slide__break"></p>
+              <picture>
+                <source srcset="img/slide-2-img-tablet.webp" type="image/webp" media="(min-width: 640px)">
+                <source srcset="img/slide-2-img-tablet.webp" type="image/webp">
+                <source srcset="img/slide-2-img-tablet.png" media="(min-width: 640px)">
+                <img class="slide__image slide__image--champion" src="img/slide-2-img-tablet.png" alt="Упаковка масла Champion">
+              </picture>
+              <a href="#" class="slide__link">Подробнее</a>
+              <p class="slide__title">Felix</p>
+            </div>
+          </div>
+          <div class="slide slide--felix-oil">
+            <div class="slide__wrapper">
+              <picture>
+                <source srcset="img/slide-2-logo.webp" type="image/webp">
+                <img class="slide__logo" src="img/slide-2-logo.png" alt="Масло Champion">
+              </picture>
+              <p class="slide__text">Масло Felix 4+1<br class="slide__break"></p>
+              <picture>
+                <source srcset="img/slide-3-img-mobile.webp" type="image/webp">
+                <img class="slide__image slide__image--champion" src="img/slide-3-img-mobile.png" alt="Упаковка масла Champion">
+              </picture>
+              <a href="#" class="slide__link">Подробнее</a>
+              <p class="slide__title">Motor Oil</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="features">
+        <ol class="features__list">
+          <li class="features__item features__item--whatsapp">
+            <div class="features__text-wrapper">
+              <h2 class="features__title">Бесплатный звонок</h2>
+              <p class="features__text">На любые номера РФ</p>
+              <a class="features__phone" href="tel:88005501980">8 800 550-19-80</a>
+            </div>
+            <a href="#" class="features__button features__button--whatsapp">
+              <svg class="features__whatsapp-icon" height="30" width="30">
+                <use xlink:href="img/sprite.svg#whatsapp"></use>
+              </svg>
+              <span class="features__whatsapp-button-text">WhatsApp</span>
+              <span class="features__whatsapp-button-number">+7 (928) 107-80-80</span>
+            </a>
+          </li>
+          <li class="features__item">
+            <div class="features__text-wrapper">
+              <h2 class="features__title">Бесплатный подбор</h2>
+              <p class="features__text">Мы найдем самую низкую цену на оригинальную запчасть, достойную альтернативу или самый дешевый аналог.</p>
+            </div>
+            <a href="#" class="features__button">Заявка на подбор</a>
+          </li>
+          <li class="features__item">
+            <div class="features__text-wrapper">
+              <h2 class="features__title">Бесплатная доставка</h2>
+              <p class="features__text">Согласуем и привезём запчасти в офис или домой в удобное для Вас время.</p>
+            </div>
+            <a href="#" class="features__button">Пункты выдачи</a>
+          </li>
+        </ol>
+      </section>
+
+      <section class="promo">
+        <div class="promo__offer  promo__offer--awm promo__offer--small">
+          <h2 class="promo__title promo__title--awm">Щетки AWM</h2>
+          <picture>
+            <source srcset="img/offer-awm-tablet.webp" type="image/webp" media="(min-width: 960px)">
+            <source srcset="img/offer-awm-mobile.webp" type="image/webp">
+            <source srcset="img/offer-awm-tablet.png" media="(min-width: 960px)">
+            <img class="promo__img" src="img/offer-awm-mobile.png" alt="Щетки AWM">
+          </picture>
+          <a class="promo__link" href="#">Подробнее</a>
+        </div>
+        <div class="promo__offer promo__offer--dot promo__offer--big">
+          <p class="promo__text">Весь январь</p>
+          <h2 class="promo__title promo__title--dot">Скидка 20%<br>на весь<br>DOT4</h2>
+          <picture>
+            <source srcset="img/offer-dot-mobile.webp" type="image/webp">
+            <img class="promo__img promo__img" src="img/offer-dot-mobile.png" alt="Тормозная жидкость DOT4">
+          </picture>
+          <a class="promo__link" href="#">Подробнее</a>
+          <div class="promo__sale-text">
+            <p>Цена снижена</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <nav class="footer-nav">
+          <a class="footer-nav__link" href="#">Подбор запчастей</a>
+          <a class="footer-nav__link" href="#">Доставка</a>
+          <a class="footer-nav__link" href="#">Как купить</a>
+          <a class="footer-nav__link" href="#">Оплата</a>
+          <a class="footer-nav__link" href="#">Договор оферты</a>
+          <a class="footer-nav__link" href="#">Политика конфиденциальности</a>
+          <a class="footer-nav__link" href="#">Реквизиты</a>
+          <a class="footer-nav__link" href="#">Контакты</a>
+          <a class="footer-nav__link" href="#">Акции</a>
+        </nav>
+        <ul class="socials">
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <svg height="10" width="17">
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <svg height="15" width="15">
+                <use xlink:href="img/sprite.svg#whatsapp-footer"></use>
+              </svg>
+              <span class="visually-hidden">WhatsApp</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <svg height="15" width="16">
+                <use xlink:href="img/sprite.svg#inst"></use>
+              </svg>
+              <span class="visually-hidden">Instagramm</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="overlay"></div>
+    <script src="js/jquery.js"></script>
+    <script src="jquery-nice-select-1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src="tiny-slider/js/tiny-slider.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
